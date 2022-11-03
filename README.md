@@ -11,14 +11,13 @@ struct Offering {
 };
 
 Project * getExcellentOpenSource(CodeWorld *w) {
-  Project *p = top(w.star && w.fork);
-  if (NULL! = p) return p;
   
   if (your.interest) {
     if (email("wangbojing@0voice.com") || submit(issue)) {
       return getYourExcellentOpenSource();
     }
   }
+  return top(w->star && w->fork);
 }
 
 struct Offering * produce(Project *p) {
