@@ -1,16 +1,54 @@
-### Hi there 👋
+### My Private Thought
 
-<!--
-**wangbojing/wangbojing** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+``` c
+struct Offering {
+  void *doc;
+  void *code;
+  void *paper;
+  void *video;
+  void *ppt;
+  void *question;
+};
 
-Here are some ideas to get you started:
+Project * getExcellentOpenSource(CodeWorld *w) {
+  Project *p = top(w.star && w.fork);
+  if (NULL! = p) return p;
+  
+  if (your.interest) {
+    if (email("wangbojing@0voice.com") || submit(issue)) {
+      return getYourExcellentOpenSource();
+    }
+  }
+}
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+struct Offering * produce(Project *p) {
+
+  Offering *o = malloc(sizeof(struct Offering));
+  o->doc = arrangeDocument(p);
+  o->code = produceExampleCode(p);
+  o->video = produceVideo(p);
+  o->paper = arrangePaper(p);
+  o->ppt = arrangePPTpdf(p);
+  o->question = arrangeQuestionList(p);
+  
+  return o;
+}
+
+void produceRepo(struct Offering *o) {
+  setRepoOrg0voice(o); // https://github.com/0voice
+  free(o);
+}
+
+int main() {
+  CodeWorld world;  // network, OS, stroage, SDN, virtual, kernel, RISC-V, (code with c/c++)
+  while(1) {
+      Project *p = getExcellentOpenSource(world);
+      //Project: dpdk, rocksdb, spdk, vpp, ovs, userstack, coroutine, virtio, nginx, redis, zmq, bpf/ebpf, io_uring
+      
+      struct Offering *o = produce(p);
+      produceRepo(o);
+      sleep(1); // 2 * 7 * 24 * 60 * 60s, 2 weeks
+  }
+}
+```
+
