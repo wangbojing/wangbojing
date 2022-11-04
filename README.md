@@ -1,4 +1,4 @@
-### My Private Thought
+### My Working Thought
 
 ``` c
 struct Offering {
