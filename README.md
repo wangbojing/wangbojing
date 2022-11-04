@@ -39,7 +39,7 @@ void produceRepo(struct Offering *o) {
 }
 
 int main() {
-  CodeWorld world;  // network, OS, stroage, SDN, virtual, kernel, RISC-V, etc. (code with c/c++)
+  CodeWorld world;  // network, OS, storage, SDN, virtual, kernel, RISC-V, etc. (code with c/c++)
   while(1) {
     Project *p = getExcellentOpenSource(world);
     //Project: dpdk, rocksdb, spdk, vpp, ovs, userstack, coroutine, virtio, nginx, redis, zmq, bpf/ebpf, io_uring, etc.
