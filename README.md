@@ -26,7 +26,7 @@ struct Offering * produce(Project *p) {
   o->doc = arrangeDocument(p);
   o->code = produceExampleCode(p);
   o->video = produceVideo(p);
-  o->paper = arrangePaper(p);
+  o->paper = arrangePaper(p); //https://www.usenix.org/
   o->ppt = arrangePPTpdf(p);
   o->question = arrangeQuestionList(p);
   
