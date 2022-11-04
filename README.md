@@ -46,7 +46,7 @@ int main() {
       
     struct Offering *o = produce(p);
     produceRepo(o);
-    sleep(1); // 2 * 7 * 24 * 60 * 60s, 2 weeks
+    sleep(2 * 7 * 24 * 60 * 60); // 2 weeks
   }
 }
 ```
