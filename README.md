@@ -40,13 +40,16 @@ void produceRepo(struct Offering *o) {
 
 int main() {
   CodeWorld world;  // network, OS, storage, SDN, virtual, kernel, RISC-V, etc. (code with c/c++)
-  while(1) {
-    Project *p = getExcellentOpenSource(world);
-    //Project: dpdk, rocksdb, spdk, vpp, ovs, userstack, coroutine, virtio, nginx, redis, zmq, bpf/ebpf, io_uring, etc.
-      
-    struct Offering *o = produce(p);
-    produceRepo(o);
-    sleep(2 * 7 * 24 * 60 * 60); // 2 weeks
+  
+#pragma omp parallel num_threads(worker_nums)  
+  {
+    while(1) {
+      Project *p = getExcellentOpenSource(world);
+      //Project: dpdk, rocksdb, spdk, vpp, ovs, userstack, coroutine, virtio, nginx, redis, zmq, bpf/ebpf, io_uring, etc.
+
+      struct Offering *o = produce(p);
+      produceRepo(o);
+    }
   }
 }
 ```
