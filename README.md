@@ -17,7 +17,7 @@ Project * getExcellentOpenSource(CodeWorld *w) {
       return getYourExcellentOpenSource();
     }
   }
-  return top(w->star) == NULL ?  top(w->fork) : top(w-star);
+  return top(w->star) == NULL ? top(w->fork) : top(w-star);
 }
 
 struct Offering * produce(Project *p) {
