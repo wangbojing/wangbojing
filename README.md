@@ -13,7 +13,7 @@ struct Offering {
 Project * getExcellentOpenSource(CodeWorld *w) {
   
   if (your.interest) {
-    if (email("wangbojing@0voice.com") || submit(issue)) {
+    if (email("zvoice.king@gmail.com") || submit(issue)) {
       return getYourExcellentOpenSource();
     }
   }
